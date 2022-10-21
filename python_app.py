@@ -3,11 +3,11 @@ import ssl
 import smtplib  # this library will send email
 
 # this is where the sender's email is set
-email_sender = 'jeanluengama@gmail.com'
+email_sender = 'sender's email'
 # this is where the sender's passwork is set generated from Google Security app
-email_password = 'gaqmyvugrnlwkdzm'
+email_password = 'password'
 
-email_receiver = 'relogi5956@3mkz.com'
+email_receiver = 'youremail'
 
 subject = "Learnign Python with free code camp"
 body = """
@@ -25,3 +25,4 @@ context = ssl.create_default_context()
 with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
     smtp.login(email_sender, email_password)
     smtp.sendmail(email_sender, email_receiver, em.as_string())
+
